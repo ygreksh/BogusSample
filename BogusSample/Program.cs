@@ -11,9 +11,9 @@ namespace BogusSample
             var person = new Person()
             {
                 Name = faker.Name.FullName(),
-                Age = faker.Random.Number(18,120),
+                Age = faker.Random.Number(18,100),
                 //PassportNumber = faker.Random.String(10,10,'\0','\uffff')
-                PassportNumber = faker.Random.String2(8, "qwertyuiopasdfghjklzxcvbnm")
+                PassportNumber = faker.Random.String2(2, "QWERTYUIOPLKJHGFDSAZXCVBNM") + "-" + faker.Random.String2(8, "0123456789")
             };
             Console.WriteLine($"{person.PassportNumber}, {person.Name}, {person.Age}");
         }
