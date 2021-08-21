@@ -16,7 +16,7 @@ namespace BogusSample
             };
             Console.WriteLine($"{person.PassportNumber}, {person.Name}, {person.Age}");
 
-            var testPersons = new Faker<Person>()
+            var testPersons = new Faker<Person>("ru")
                 .RuleFor(p => p.Name, f => f.Name.FullName())
                 .RuleFor(p => p.Age, f => f.Random.Number(18, 100))
                 .RuleFor(p => p.PassportNumber,
